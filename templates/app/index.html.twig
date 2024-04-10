@@ -7,3 +7,9 @@
     <div {{ vue_component('app') }}></div>
 
 {% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.storage = {{ storage|json_encode|raw }};
+    </script>
+{% endblock %}

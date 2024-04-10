@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class AppController extends AbstractController
 {
-    #[Route('/', name: 'app_entrypoint', options: ['expose' => true])]
+    #[Route('/app/{pattern}', name: 'app_entrypoint', requirements: ['pattern' => '^.+'], options: ['expose' => true], defaults: ['pattern' => 'entrypoint'])]
     #[Template('app/index.html.twig')]
     public function index(): array
     {
