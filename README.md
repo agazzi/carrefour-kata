@@ -58,4 +58,4 @@ symfony server:start
 
 Once the development server is running, you can access the application at the following URL:
 
-http://localhost:8000
+http://localhost:8000/app/
